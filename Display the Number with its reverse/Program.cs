@@ -1,15 +1,36 @@
-﻿using System;
+﻿/*
+ * C# Program to Get a Number and Display the Number with its Reverse
+ */
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
-namespace Display_the_Number_with_its_reverse
+namespace Program
 {
     class Program
     {
         static void Main(string[] args)
         {
+            int num, reverse = 0;
+            Console.WriteLine("Enter a Number : ");
+            num = int.Parse(Console.ReadLine());
+            while (num != 0)
+            {
+                reverse = reverse * 10;
+                reverse = reverse + num % 10;
+                num = num / 10;
+            }
+            Console.WriteLine("Reverse of Entered Number is : " + reverse);
+            Console.ReadLine();
+
         }
     }
 }
+/*
+Enter a Number :
+4566
+Reverse of Entered Number is : 6654
+
+Press any key to continue . . .
+*/
